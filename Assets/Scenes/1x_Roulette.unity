@@ -397,7 +397,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &32429762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -506,7 +508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &73168359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -624,8 +628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c05052f3d4b524f94d2be0b0fe9983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ui: {fileID: 252746392}
   betColor: 1
-  bsRef: {fileID: 1885787555}
 --- !u!1 &92356124
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &93114996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -860,7 +866,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &93799646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -933,7 +941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 169680914}
   m_Layer: 5
-  m_Name: BetScreenTable
+  m_Name: BetTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,7 +981,7 @@ GameObject:
   - component: {fileID: 192931783}
   - component: {fileID: 192931782}
   m_Layer: 5
-  m_Name: ResultScreenTitle
+  m_Name: TextTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1069,11 +1077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078dba38173de6b45ac0a59942b8ddd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  betScreen: {fileID: 1885787553}
+  ui: {fileID: 252746392}
   wheel: {fileID: 1841816391}
-  resultScreen: {fileID: 1742720133}
-  tu: {fileID: 1468796030}
-  spinSpeed: 1.5
 --- !u!4 &197264935
 Transform:
   m_ObjectHideFlags: 0
@@ -1084,10 +1089,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1468796029}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &198689182
 GameObject:
@@ -1343,7 +1347,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &244287138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1567,6 +1573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 252746391}
+  - component: {fileID: 252746392}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1587,8 +1594,25 @@ Transform:
   m_Children:
   - {fileID: 251141113}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &252746392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252746390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d26a073ea3044489bc062663fd88cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  master: {fileID: 197264934}
+  betMenu: {fileID: 1885787553}
+  resultMenu: {fileID: 1742720133}
+  chipsText: {fileID: 893425221}
+  resultsText: {fileID: 192931782}
 --- !u!1 &257653411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,7 +1659,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &257653414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1744,7 +1770,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &272448790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1986,7 +2014,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &366045351
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2095,7 +2125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &370916314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2535,7 +2567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 2
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!1 &506545231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,7 +2806,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &555214640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2881,7 +2917,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &580905445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2990,7 +3028,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &587771631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3203,8 +3243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c05052f3d4b524f94d2be0b0fe9983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ui: {fileID: 252746392}
   betColor: 2
-  bsRef: {fileID: 1885787555}
 --- !u!1 &605914077
 GameObject:
   m_ObjectHideFlags: 0
@@ -3633,7 +3673,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &658659806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4226,7 +4268,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &724671530
 GameObject:
@@ -4274,7 +4316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &724671533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4383,7 +4427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &746445430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4492,7 +4538,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &759587428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4867,8 +4915,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1468796031}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: playAgain
+        m_TargetAssemblyTypeName: Roulette_SceneManagement, Assembly-CSharp
+        m_MethodName: reloadRouletteScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4962,7 +5010,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &832072376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5132,7 +5182,7 @@ GameObject:
   - component: {fileID: 893425222}
   - component: {fileID: 893425221}
   m_Layer: 5
-  m_Name: ChipsText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5473,7 +5523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &945473628
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5582,7 +5634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &947199517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5845,7 +5899,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &951451224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6132,7 +6188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1005928218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6345,8 +6403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c05052f3d4b524f94d2be0b0fe9983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ui: {fileID: 252746392}
   betColor: 0
-  bsRef: {fileID: 1885787555}
 --- !u!1 &1058165370
 GameObject:
   m_ObjectHideFlags: 0
@@ -6492,7 +6550,7 @@ GameObject:
   - component: {fileID: 1104827256}
   - component: {fileID: 1104827255}
   m_Layer: 5
-  m_Name: BetScreenBG
+  m_Name: ImageBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6759,7 +6817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1183905874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6834,7 +6894,7 @@ GameObject:
   - component: {fileID: 1195333764}
   - component: {fileID: 1195333763}
   m_Layer: 5
-  m_Name: ChipsBG
+  m_Name: ImageBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7283,7 +7343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1248437925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7487,7 +7549,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1253656670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7792,7 +7856,7 @@ Transform:
   - {fileID: 1841816390}
   - {fileID: 1223480898}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1285616087
 GameObject:
@@ -8127,7 +8191,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1373653022
 GameObject:
@@ -8308,7 +8372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1432487892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8383,7 +8449,7 @@ GameObject:
   - component: {fileID: 1449419208}
   - component: {fileID: 1449419207}
   m_Layer: 5
-  m_Name: SeparationLine
+  m_Name: TextSeparationLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8459,10 +8525,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1468796029}
-  - component: {fileID: 1468796030}
   - component: {fileID: 1468796031}
   m_Layer: 0
-  m_Name: Utility
+  m_Name: System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8475,27 +8540,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1468796028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 197264935}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1468796030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468796028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43d734ea1f7507541957df60317aa03b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chipsText: {fileID: 893425221}
-  resultsText: {fileID: 192931782}
 --- !u!114 &1468796031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8508,6 +8559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4df604fc6e3174f9d574c885379087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rouletteSceneName: 1x_Roulette
 --- !u!1 &1477077933
 GameObject:
   m_ObjectHideFlags: 0
@@ -8554,7 +8606,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1477077936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9103,7 +9157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1557361409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9212,7 +9268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1594111003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9691,7 +9749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1663824276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9800,7 +9860,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1664159613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9970,7 +10032,7 @@ GameObject:
   - component: {fileID: 1704305649}
   - component: {fileID: 1704305648}
   m_Layer: 5
-  m_Name: ResultScreenBG
+  m_Name: ImageBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10122,7 +10184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1742720134}
   m_Layer: 5
-  m_Name: ResultScreen
+  m_Name: ResultMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10196,7 +10258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1749994326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10479,7 +10543,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1795278413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10670,7 +10736,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a16faff47cb934588499b10d883253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  master: {fileID: 197264934}
   spinStopSpeed: 1000
+  spinSpeed: 1.5
 --- !u!1 &1876653694
 GameObject:
   m_ObjectHideFlags: 0
@@ -10891,7 +10959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &1879919194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10965,7 +11035,7 @@ GameObject:
   - component: {fileID: 1885787554}
   - component: {fileID: 1885787555}
   m_Layer: 5
-  m_Name: BetScreen
+  m_Name: BetMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11005,6 +11075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a943b4b60e01c504c9c666d6bb22f903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRef: {fileID: 0}
 --- !u!1 &1895802968
 GameObject:
   m_ObjectHideFlags: 0
@@ -11321,7 +11392,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &2015436420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11497,7 +11570,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 1
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &2061548062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11606,7 +11681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 808b8f229d37a9e44822fbdc9d15c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rouletteColor: 0
+  master: {fileID: 197264934}
+  number: 0
+  color: 0
 --- !u!65 &2084185071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11681,7 +11758,7 @@ GameObject:
   - component: {fileID: 2084860549}
   - component: {fileID: 2084860548}
   m_Layer: 5
-  m_Name: BetScreenTitle
+  m_Name: TextTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
